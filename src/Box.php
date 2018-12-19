@@ -356,7 +356,7 @@ class Box
                     $line .= " ".$words[$i];
                 }
             }
-            $lines[] = $line;
+            $lines[] = preg_replace("/^ +/", "", $line);
         }
         return $lines;
     }
